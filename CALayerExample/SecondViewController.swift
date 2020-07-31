@@ -9,7 +9,10 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+   
+    @IBOutlet weak var buttonSVC: UIButton!
+    @IBOutlet weak var imageSVC: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
