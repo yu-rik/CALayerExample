@@ -23,14 +23,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75A-fN-eNF">
-                                <rect key="frame" x="107" y="762" width="200" height="100"/>
+                                <rect key="frame" x="83.666666666666686" y="762" width="247" height="100"/>
                                 <color key="backgroundColor" red="0.59354245660000005" green="0.8910307288" blue="0.69847661260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="7Rj-1Q-zgC"/>
                                     <constraint firstAttribute="height" constant="100" id="t2R-Bd-LYP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Go to the Second View">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="  Go to the Second View  ">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -38,8 +38,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.96675639530000002" blue="0.56435756579999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="75A-fN-eNF" firstAttribute="top" relation="lessThanOrEqual" secondItem="fHe-pe-inI" secondAttribute="bottom" constant="458" id="8zx-ry-za3"/>
                             <constraint firstItem="fHe-pe-inI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eil-3D-eHK"/>
                             <constraint firstItem="75A-fN-eNF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ids-tF-Ax3"/>
                             <constraint firstItem="75A-fN-eNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NEX-WG-YME"/>
@@ -72,22 +73,26 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nli-d2-aIL">
-                                <rect key="frame" x="107" y="762" width="200" height="100"/>
+                                <rect key="frame" x="85.666666666666686" y="762" width="243" height="100"/>
                                 <color key="backgroundColor" red="0.59354245660000005" green="0.8910307288" blue="0.69847661260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6kJ-jZ-2TI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="6kJ-jZ-2TI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Ner-kb-VPg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Go to the Apple">
+                                <state key="normal" title="  Go from the Apple  ">
                                     <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="spT-iz-iha" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="dRf-0K-Sok"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Rjg-RR-M5i" firstAttribute="top" secondItem="w7m-d3-n5B" secondAttribute="top" constant="20" id="6EJ-tI-IvO"/>
                             <constraint firstItem="Rjg-RR-M5i" firstAttribute="centerX" secondItem="w7m-d3-n5B" secondAttribute="centerX" id="9ar-Po-eHG"/>
+                            <constraint firstItem="nli-d2-aIL" firstAttribute="top" relation="lessThanOrEqual" secondItem="Rjg-RR-M5i" secondAttribute="bottom" constant="458" id="TCb-ab-DZh"/>
                             <constraint firstItem="nli-d2-aIL" firstAttribute="centerX" secondItem="w7m-d3-n5B" secondAttribute="centerX" id="te5-Qm-ABL"/>
                             <constraint firstItem="nli-d2-aIL" firstAttribute="bottom" secondItem="w7m-d3-n5B" secondAttribute="bottom" id="tjr-09-tSp"/>
                         </constraints>
@@ -100,8 +105,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPh-am-XGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="spT-iz-iha" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="449" y="143"/>
+            <point key="canvasLocation" x="564" y="143"/>
         </scene>
     </scenes>
     <resources>

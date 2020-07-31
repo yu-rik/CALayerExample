@@ -10,8 +10,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
    
-    @IBOutlet weak var buttonSVC: UIButton!
-    @IBOutlet weak var imageSVC: UIImageView!
+    @IBOutlet weak var buttonSVC: UIButton!{
+        didSet{
+            buttonSVC.layer.shadowOffset = CGSize(width: 0, height: 5)
+            buttonSVC.layer.shadowOpacity = 0.5
+            buttonSVC.layer.shadowRadius = 5
+            buttonSVC.layer.shadowColor = UIColor.red.cgColor
+            
+        }
+    }
+    @IBOutlet weak var imageSVC: UIImageView!{
+        didSet{
+            imageSVC.layer.cornerRadius = imageSVC.frame.size.height/2
+            imageSVC.layer.masksToBounds = true
+            imageSVC.layer.borderColor = UIColor.red.cgColor
+            imageSVC.layer.borderWidth = 5
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

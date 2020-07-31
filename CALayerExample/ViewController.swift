@@ -10,12 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageVC: UIImageView!
+    @IBOutlet weak var imageVC: UIImageView!{
+       //наблюдатель свойства
+        didSet{
+            imageVC.layer.cornerRadius = 50
+            imageVC.layer.masksToBounds = true
+        }
+    }
     @IBOutlet weak var buttonVC: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue){
+        
     }
 
 
