@@ -9,7 +9,17 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-   
+    var gradientLayer: CAGradientLayer!{
+        didSet{
+        //координаты местоположения градиента
+            gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+            //цвета градиента
+            gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.red.cgColor, UIColor.orange.cgColor]
+            gradientLayer.locations = [0.1, 0.2, 0.8]
+         }
+    }
+    
     @IBOutlet weak var buttonSVC: UIButton!{
         didSet{
             buttonSVC.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -29,10 +39,19 @@ class SecondViewController: UIViewController {
         }
     }
     
+    //метод для праильного отображения градиента при разной ориентации
+    override func viewDidLayoutSubviews() {
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//инициализация gradientLayer
+        gradientLayer = CAGradientLayer()
+        //добавляем gradientLayer в качестве подслоя SecondViewController
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
     
 
